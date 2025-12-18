@@ -662,6 +662,17 @@ aside.clients img {
     margin: 50px auto;
 }
 
+.clients .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .clients .row > div {
+    flex: 0 0 18%; /* roughly five items per row */
+    margin-bottom: 15px;
+  }
+
 section#contact {
     background-color: #222;
     background-image: url('{{ site.baseurl }}/img/map-image.png');
