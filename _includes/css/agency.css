@@ -936,13 +936,13 @@ body {
     padding: 5px 15px;
     margin-bottom: 20px;
     border-radius: 4px;
-    background-color: #a50021; /* primary accent colour */
+    background-color: #a53860; /* primary accent colour */
     color: #fff;
   }
   
   #hero .hero-cta.btn-primary {
-    background-color: #a50021;
-    border-color: #a50021;
+    background-color: #a53860;
+    border-color: #a53860;
     color: #fff;
   }
   
