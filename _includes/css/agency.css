@@ -673,12 +673,12 @@ aside.clients img {
     margin-bottom: 15px;
   }
 
-section#contact {
+/* section#contact {
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    # background-image: url('{{ site.baseurl }}/img/.png');
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
 
 section#contact .section-heading {
     color: #fff;
