@@ -913,10 +913,7 @@ body {
     color: #fff;
   }
   
-  #hero .hero-overlay {
-    background: rgba(0,0,0,0.5); /* dark overlay on the red background */
-    padding: 60px 15px;
-  }
+  
   
   #hero .hero-title {
     font-size: 48px;
