@@ -883,3 +883,81 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+/* Transparent nav bar like HEAL’s */
+.navbar-transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  
+  .navbar-transparent .navbar-brand,
+  .navbar-transparent .nav > li > a {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffffff;
+  }
+  
+  .navbar-transparent .nav > li > a:hover,
+  .navbar-transparent .nav > li > a:focus {
+    color: #edd8a1; /* secondary colour from template.yml */
+  }
+  
+  /* Hero section styling */
+  #hero {
+    position: relative;
+    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  #hero .hero-overlay {
+    background: rgba(0,0,0,0.5); /* dark overlay on the red background */
+    padding: 60px 15px;
+  }
+  
+  #hero .hero-title {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  #hero .hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #hero .hero-date {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  #hero .hero-deadline {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background-color: #a50021; /* primary accent colour */
+    color: #fff;
+  }
+  
+  #hero .hero-cta.btn-primary {
+    background-color: #a50021;
+    border-color: #a50021;
+    color: #fff;
+  }
+  
+  #hero .hero-cta.btn-primary:hover,
+  #hero .hero-cta.btn-primary:focus {
+    background-color: #7d0018; /* slightly darker on hover */
+    border-color: #7d0018;
+  }
+  
+  /* Remove the shrink-on-scroll effect if desired */
+  .navbar-default.navbar-shrink {
+    background-color: transparent;
+    padding: 25px 0;
+  }
+  
