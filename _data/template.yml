@@ -1,7 +1,7 @@
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: a50021
-  secondary: edd8a1   
+  primary: edd8a1
+  secondary: a50021  
   secondary-dark: 333
   muted: 777
 
