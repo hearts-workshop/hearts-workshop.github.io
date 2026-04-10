@@ -883,24 +883,42 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
-/* Transparent nav bar like HEAL’s */
+/* Solid nav bar */
 .navbar-transparent {
-    background-color: transparent;
-    border-color: transparent;
-  }
-  
-  .navbar-transparent .navbar-brand,
-  .navbar-transparent .nav > li > a {
+    background-color: #edd8a1;
+    border-color: #edd8a1;
+}
+
+.navbar-transparent .navbar-brand,
+.navbar-transparent .nav > li > a {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    letter-spacing: 1px;
-    color: #ffffff;
-  }
-  
-  .navbar-transparent .nav > li > a:hover,
-  .navbar-transparent .nav > li > a:focus {
-    color: #edd8a1; /* secondary colour from template.yml */
-  }
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.navbar-transparent .navbar-brand {
+    font-size: 14px;
+}
+
+.navbar-transparent .nav > li > a:hover,
+.navbar-transparent .nav > li > a:focus {
+    color: #a53860;
+    background-color: transparent;
+}
+
+/* Keep solid background at all scroll positions and screen sizes */
+@media(min-width:768px) {
+    .navbar-default.navbar-transparent {
+        background-color: #edd8a1;
+        padding: 10px 0;
+    }
+    .navbar-default.navbar-transparent.navbar-shrink {
+        background-color: #edd8a1;
+        padding: 8px 0;
+    }
+}
   
   /* Hero section styling */
   #hero {
