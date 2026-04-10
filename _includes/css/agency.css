@@ -885,8 +885,10 @@ body {
 }
 /* Solid nav bar */
 .navbar-transparent {
-    background-color: #edd8a1 !important;
-    border-color: #edd8a1 !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
 }
 
 .navbar-transparent .navbar-brand,
@@ -895,7 +897,7 @@ body {
     font-weight: 400;
     letter-spacing: 0.5px;
     font-size: 12px;
-    color: #333 !important;
+    color: #fff !important;
 }
 
 .navbar-transparent .navbar-brand {
@@ -905,14 +907,14 @@ body {
 
 .navbar-transparent .nav > li > a:hover,
 .navbar-transparent .nav > li > a:focus {
-    color: #a53860 !important;
+    color: #edd8a1 !important;
     background-color: transparent !important;
 }
 
-/* Keep solid background and compact height at all scroll positions */
+/* Keep compact height at all scroll positions */
 @media(min-width:768px) {
     .navbar-default.navbar-transparent {
-        background-color: #edd8a1 !important;
+        background-color: transparent !important;
         padding: 10px 0 !important;
     }
     .navbar-default.navbar-transparent .navbar-brand {
@@ -920,7 +922,7 @@ body {
         line-height: 30px;
     }
     .navbar-default.navbar-transparent.navbar-shrink {
-        background-color: #edd8a1 !important;
+        background-color: transparent !important;
         padding: 10px 0 !important;
     }
 }
@@ -977,7 +979,7 @@ body {
   
   /* Remove the shrink-on-scroll effect if desired */
   .navbar-default.navbar-shrink {
-    background-color: #edd8a1 !important;
+    background-color: transparent !important;
     padding: 10px 0 !important;
   }
   
