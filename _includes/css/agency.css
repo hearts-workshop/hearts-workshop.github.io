@@ -883,12 +883,18 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
-/* Solid nav bar */
+/* Navbar overlays hero image */
 .navbar-transparent {
     background-color: transparent !important;
     border-color: transparent !important;
     margin-bottom: 0 !important;
     box-shadow: none !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar-transparent .navbar-brand,
