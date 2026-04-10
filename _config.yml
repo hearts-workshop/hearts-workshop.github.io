@@ -16,14 +16,6 @@ people:
   pic: 2
   position: University of Edinburgh
 
-- name: Laura Dabbish
-  pic: 3
-  position: Carnegie Mellon University
-
-- name: Hong Shen
-  pic: 4
-  position: Carnegie Mellon University
-
 - name: Alex S. Taylor
   pic: 5
   position: University of Edinburgh
@@ -39,6 +31,14 @@ people:
 - name: Bolor-Erdene Jagdagdorj
   pic: 8
   position: Microsoft
+
+- name: Laura Dabbish
+  pic: 3
+  position: Carnegie Mellon University
+
+- name: Hong Shen
+  pic: 4
+  position: Carnegie Mellon University
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 # social:

@@ -1,0 +1,166 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+  .sheet { max-width: 800px; margin: 0 auto; font-family: var(--font-sans); background: #f5f0f2; padding: 28px; border-radius: 12px; }
+  .sheet-label { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #993556; margin: 0 0 5px; }
+  .sheet-note { font-size: 11px; color: #888780; margin: 0 0 20px; }
+  .card-row { display: flex; gap: 14px; margin-bottom: 14px; justify-content: center; }
+
+  .bc { width: 216px; height: 128px; border-radius: 10px; flex-shrink: 0; overflow: hidden; outline: 1px dashed #D4537E; outline-offset: 3px; }
+
+  .bc-front { background: #4B1528; width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; padding: 11px 14px 10px; box-sizing: border-box; }
+  .bc-top { display: flex; align-items: flex-start; justify-content: space-between; }
+  .bc-overline { font-size: 7px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #993556; margin: 0 0 2px; }
+  .bc-title { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 700; color: #FBEAF0; line-height: 1; margin: 0; letter-spacing: -0.01em; }
+  .bc-mid { display: flex; align-items: flex-end; padding-bottom: 6px; }
+  .bc-tagline { font-size: 7.5px; color: #F4C0D1; line-height: 1.45; margin: 0; }
+  .bc-bottom { border-top: 0.5px solid #72243E; padding-top: 6px; display: flex; gap: 0; align-items: flex-start; }
+  .bc-meta { display: flex; flex-direction: column; gap: 1px; flex: 1; }
+  .bc-meta + .bc-meta { padding-left: 8px; margin-left: 8px; border-left: 0.5px solid #72243E; }
+  .bc-meta-label { font-size: 6.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #993556; margin: 0; }
+  .bc-meta-val { font-size: 8.5px; font-weight: 500; color: #FBEAF0; margin: 0; white-space: nowrap; }
+
+  .bc-back { background: #FBEAF0; width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr auto; padding: 11px 14px 10px; box-sizing: border-box; }
+  .bc-back-head { display: flex; align-items: center; gap: 6px; margin-bottom: 7px; }
+  .bc-back-accent { height: 2px; background: #D4537E; border-radius: 2px; width: 20px; flex-shrink: 0; }
+  .bc-back-title { font-size: 7.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: #D4537E; margin: 0; }
+  .bc-back-body { font-size: 8px; color: #72243E; line-height: 1.6; margin: 0; }
+  .bc-back-bottom { border-top: 0.5px solid #ED93B1; padding-top: 6px; display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
+  .bc-url { font-size: 7.5px; font-weight: 500; color: #993556; margin: 0; }
+  .bc-chi { font-size: 7px; color: #D4537E; margin: 0; }
+
+  .separator { font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #D4537E; margin: 8px 0 16px; display: flex; align-items: center; gap: 10px; }
+  .sep-line { flex: 1; height: 0.5px; background: #ED93B1; }
+</style>
+
+<template id="logo-svg">
+  <svg width="30" height="28" viewBox="0 0 60 54" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="30" cy="50" rx="28" ry="6" fill="#3a0f1e" opacity="0.4"/>
+    <!-- back left -->
+    <circle cx="12" cy="18" r="7" fill="#ED93B1"/>
+    <rect x="5" y="24" width="14" height="14" rx="7" fill="#ED93B1"/>
+    <!-- back right -->
+    <circle cx="48" cy="18" r="7" fill="#72243E"/>
+    <rect x="41" y="24" width="14" height="14" rx="7" fill="#72243E"/>
+    <!-- mid left -->
+    <circle cx="20" cy="14" r="8" fill="#F4C0D1"/>
+    <rect x="12" y="21" width="16" height="16" rx="8" fill="#F4C0D1"/>
+    <!-- mid right -->
+    <circle cx="40" cy="14" r="8" fill="#993556"/>
+    <rect x="32" y="21" width="16" height="16" rx="8" fill="#993556"/>
+    <!-- front center -->
+    <circle cx="30" cy="11" r="9" fill="#D4537E"/>
+    <rect x="20" y="19" width="20" height="20" rx="10" fill="#D4537E"/>
+  </svg>
+</template>
+
+<div class="sheet">
+  <p class="sheet-label">Front side · 3 per row</p>
+  <p class="sheet-note">Dashed outline = cut line. Card size 85 × 55 mm / 3.5 × 2 in.</p>
+
+  <div class="card-row" id="fronts-1"></div>
+  <div class="card-row" id="fronts-2"></div>
+
+  <div class="separator"><span class="sep-line"></span>flip · back side<span class="sep-line"></span></div>
+
+  <p class="sheet-label">Back side · 3 per row</p>
+  <p class="sheet-note">Print on reverse. Align cut lines before cutting.</p>
+
+  <div class="card-row" id="backs-1"></div>
+  <div class="card-row" id="backs-2"></div>
+</div>
+
+<script>
+  function makeLogo() {
+    const t = document.getElementById('logo-svg').content.cloneNode(true);
+    return t.firstElementChild;
+  }
+
+  function makeFront() {
+    const bc = document.createElement('div');
+    bc.className = 'bc';
+    bc.style.borderColor = '#72243E';
+
+    const front = document.createElement('div');
+    front.className = 'bc-front';
+
+    const top = document.createElement('div');
+    top.className = 'bc-top';
+
+    const textBlock = document.createElement('div');
+    const overline = document.createElement('p');
+    overline.className = 'bc-overline';
+    overline.textContent = 'CHI 2026 · Barcelona';
+    const title = document.createElement('p');
+    title.className = 'bc-title';
+    title.textContent = 'HEARTS';
+    textBlock.appendChild(overline);
+    textBlock.appendChild(title);
+
+    const logoWrap = document.createElement('div');
+    logoWrap.style.cssText = 'width:30px;height:28px;flex-shrink:0;margin-top:2px;';
+    logoWrap.appendChild(makeLogo());
+
+    top.appendChild(textBlock);
+    top.appendChild(logoWrap);
+
+    const mid = document.createElement('div');
+    mid.className = 'bc-mid';
+    const tagline = document.createElement('p');
+    tagline.className = 'bc-tagline';
+    tagline.innerHTML = 'Human Expertise for AI Red-Teaming<br>and Scalable Evaluation';
+    mid.appendChild(tagline);
+
+    const bottom = document.createElement('div');
+    bottom.className = 'bc-bottom';
+    [['Date','April 14, 2026'],['Time','2:15 – 6:00 CET'],['Venue','Barcelona']].forEach(([l,v]) => {
+      const m = document.createElement('div');
+      m.className = 'bc-meta';
+      m.innerHTML = `<p class="bc-meta-label">${l}</p><p class="bc-meta-val">${v}</p>`;
+      bottom.appendChild(m);
+    });
+
+    front.appendChild(top);
+    front.appendChild(mid);
+    front.appendChild(bottom);
+    bc.appendChild(front);
+    return bc;
+  }
+
+  function makeBack() {
+    const bc = document.createElement('div');
+    bc.className = 'bc';
+
+    const back = document.createElement('div');
+    back.className = 'bc-back';
+
+    const head = document.createElement('div');
+    head.className = 'bc-back-head';
+    head.innerHTML = '<div class="bc-back-accent"></div><p class="bc-back-title">What is AI red teaming?</p>';
+
+    const body = document.createElement('p');
+    body.className = 'bc-back-body';
+    body.textContent = 'Adversarially testing AI systems to surface risks like psychological harms or models aiding in dangerous activities such as bomb threats.';
+
+    const btm = document.createElement('div');
+    btm.className = 'bc-back-bottom';
+    btm.innerHTML = '<p class="bc-url">hearts-workshop.github.io</p><p class="bc-chi">CHI 2026</p>';
+
+    back.appendChild(head);
+    back.appendChild(body);
+    back.appendChild(btm);
+    bc.appendChild(back);
+    return bc;
+  }
+
+  ['fronts-1','fronts-2'].forEach(id => {
+    const row = document.getElementById(id);
+    for (let i = 0; i < 3; i++) row.appendChild(makeFront());
+  });
+
+  ['backs-1','backs-2'].forEach(id => {
+    const row = document.getElementById(id);
+    for (let i = 0; i < 3; i++) row.appendChild(makeBack());
+  });
+</script>

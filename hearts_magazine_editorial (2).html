@@ -1,0 +1,224 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+
+  .mag { max-width: 800px; margin: 0 auto; font-family: var(--font-sans); background: var(--color-background-primary); border-radius: 4px; overflow: hidden; }
+
+  .mag-hero { background: #4B1528; display: grid; grid-template-columns: 1fr 1fr; min-height: 220px; }
+  .mag-hero-left { padding: 32px 32px 28px; display: flex; flex-direction: column; justify-content: space-between; }
+  .mag-hero-right { background: #72243E; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+  .mag-overline { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #D4537E; margin: 0 0 12px; }
+  .mag-display { font-family: 'Playfair Display', Georgia, serif; font-size: 72px; font-weight: 700; color: #FBEAF0; line-height: 0.9; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .mag-tagline { font-size: 13px; color: #F4C0D1; line-height: 1.5; margin: 0; max-width: 280px; }
+  .mag-meta-strip { display: flex; gap: 16px; padding-top: 18px; border-top: 0.5px solid #72243E; margin-top: 18px; }
+  .mag-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .mag-meta-label { font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #993556; }
+  .mag-meta-val { font-size: 12px; font-weight: 500; color: #FBEAF0; }
+
+  .mag-hero-art { width: 100%; height: 100%; }
+
+  .mag-body { padding: 32px 32px 24px; }
+  .mag-columns { display: grid; grid-template-columns: 1.1fr 18px 0.95fr 18px 0.75fr; gap: 0; margin-bottom: 28px; }
+  .mag-col { min-width: 0; }
+  .mag-rule { width: 0.5px; background: #F4C0D1; margin: 0 auto; }
+
+  .mag-section-eyebrow { font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #D4537E; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1.5px solid #D4537E; display: inline-block; }
+  .mag-col-head { font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-weight: 700; color: #4B1528; line-height: 1.2; margin: 0 0 12px; }
+  .mag-col-head-var { font-family: var(--font-sans); font-size: 16px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; margin: 0 0 10px; }
+  .mag-body-text { font-size: 12px; color: var(--color-text-secondary); line-height: 1.75; margin: 0; }
+  .mag-body-text + .mag-body-text { margin-top: 8px; }
+
+  .mag-pill-row { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
+  .mag-pill { font-size: 10px; background: #FBEAF0; color: #72243E; border-radius: 20px; padding: 2px 8px; border: 0.5px solid #ED93B1; }
+
+  .mag-timeline { position: relative; padding-left: 18px; }
+  .mag-tl-line { position: absolute; left: 5px; top: 6px; bottom: 6px; width: 1px; background: #F4C0D1; }
+  .mag-tl-item { position: relative; margin-bottom: 14px; }
+  .mag-tl-item:last-child { margin-bottom: 0; }
+  .mag-tl-dot { position: absolute; left: -17px; top: 4px; width: 9px; height: 9px; border-radius: 50%; background: #D4537E; border: 2px solid #FBEAF0; outline: 1px solid #D4537E; }
+  .mag-tl-dot-break { background: #F4C0D1; }
+  .mag-tl-time { font-size: 9.5px; font-weight: 500; color: #D4537E; margin: 0 0 1px; letter-spacing: 0.04em; }
+  .mag-tl-title { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 1px; line-height: 1.3; }
+  .mag-tl-sub { font-size: 11px; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
+
+  .mag-theme { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 0.5px solid #F4C0D1; }
+  .mag-theme:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .mag-theme-title { font-size: 12px; font-weight: 500; color: #4B1528; margin: 0 0 2px; }
+  .mag-theme-desc { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
+
+  .mag-band { background: #4B1528; border-radius: 6px; padding: 20px 24px; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+  .mag-band-label { font-size: 9px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: #D4537E; margin: 0 0 5px; }
+  .mag-band-val { font-size: 12px; color: #F4C0D1; line-height: 1.5; margin: 0; }
+  .mag-band-big { font-family: 'Playfair Display', Georgia, serif; font-size: 32px; font-weight: 700; color: #FBEAF0; margin: 0 0 2px; line-height: 1; }
+
+  .mag-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1.5px solid #D4537E; padding-top: 12px; margin-top: 20px; }
+  .mag-footer-left { font-size: 10.5px; color: var(--color-text-secondary); }
+  .mag-footer-right { font-size: 11px; font-weight: 500; color: #993556; letter-spacing: 0.02em; }
+</style>
+
+<div class="mag">
+
+  <div class="mag-hero">
+    <div class="mag-hero-left">
+      <div>
+        <p class="mag-overline">CHI 2026 · Workshop · Barcelona</p>
+        <p class="mag-display">HEARTS</p>
+        <p class="mag-tagline">Human Expertise for AI Red-Teaming and Scalable Evaluation</p>
+      </div>
+      <div class="mag-meta-strip">
+        <div class="mag-meta-item"><span class="mag-meta-label">Date</span><span class="mag-meta-val">April 14, 2026</span></div>
+        <div class="mag-meta-item"><span class="mag-meta-label">Time</span><span class="mag-meta-val">2:15–6:00 CET</span></div>
+        <div class="mag-meta-item"><span class="mag-meta-label">Format</span><span class="mag-meta-val">In person · 3 hrs</span></div>
+        <div class="mag-meta-item"><span class="mag-meta-label">Attendees</span><span class="mag-meta-val">40–60</span></div>
+      </div>
+    </div>
+
+    <div class="mag-hero-right">
+      <svg class="mag-hero-art" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="220" fill="#72243E"/>
+        <circle cx="320" cy="40" r="120" fill="#993556" opacity="0.4"/>
+        <circle cx="80" cy="180" r="90" fill="#4B1528" opacity="0.6"/>
+        <circle cx="200" cy="110" r="60" fill="#993556" opacity="0.3"/>
+        <g transform="translate(200,110)">
+          <circle cx="0" cy="-55" r="18" fill="#F4C0D1" opacity="0.9"/>
+          <rect x="-22" y="-36" width="44" height="38" rx="22" fill="#F4C0D1" opacity="0.9"/>
+          <circle cx="-52" cy="-48" r="14" fill="#ED93B1" opacity="0.8"/>
+          <rect x="-70" y="-33" width="36" height="30" rx="18" fill="#ED93B1" opacity="0.8"/>
+          <circle cx="52" cy="-48" r="14" fill="#D4537E" opacity="0.8"/>
+          <rect x="34" y="-33" width="36" height="30" rx="18" fill="#D4537E" opacity="0.8"/>
+          <circle cx="-30" cy="-42" r="11" fill="#F4C0D1" opacity="0.7"/>
+          <rect x="-42" y="-30" width="28" height="24" rx="14" fill="#F4C0D1" opacity="0.7"/>
+          <circle cx="30" cy="-42" r="11" fill="#ED93B1" opacity="0.7"/>
+          <rect x="14" y="-30" width="28" height="24" rx="14" fill="#ED93B1" opacity="0.7"/>
+        </g>
+        <line x1="60" y1="110" x2="340" y2="110" stroke="#993556" stroke-width="0.5" opacity="0.4"/>
+        <line x1="200" y1="20" x2="200" y2="200" stroke="#993556" stroke-width="0.5" opacity="0.4"/>
+        <text x="200" y="175" text-anchor="middle" font-size="10" fill="#D4537E" opacity="0.8" font-family="Georgia, serif" letter-spacing="2">human · AI · evaluation</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="mag-body">
+    <div class="mag-columns">
+
+      <div class="mag-col">
+        <span class="mag-section-eyebrow">What is AI red teaming?</span>
+        <p class="mag-col-head">Stress-testing AI before it reaches the world</p>
+        <p class="mag-body-text">Red teaming means adversarially probing an AI system to find risks before they cause real-life harms. Red-teamers intentionally surface unsafe outputs, biases, and other types of harms, drawing from military and cybersecurity traditions where simulated attacks reveal gaps early.</p>
+        <p class="mag-body-text">It's now a practice increasingly used at major tech companies and has even been encouraged by governments and public challenges like DEFCON 2023 and NIST's ARIA program. The challenge: there's an increasing need for red-teaming, but it's unclear how we can approach this challenge of scale while still retaining quality and centering the underlying human expertise necessary.</p>
+        <div class="mag-pill-row">
+          <span class="mag-pill">Adversarial testing</span>
+          <span class="mag-pill">AI safety</span>
+          <span class="mag-pill">Risk identification</span>
+          <span class="mag-pill">Human evaluation</span>
+        </div>
+      </div>
+
+      <div class="mag-rule"></div>
+
+      <div class="mag-col" style="padding: 0 4px;">
+        <span class="mag-section-eyebrow">Programme</span>
+        <div class="mag-timeline">
+          <div class="mag-tl-line"></div>
+          <div class="mag-tl-item">
+            <div class="mag-tl-dot"></div>
+            <p class="mag-tl-time">2:15 CET</p>
+            <p class="mag-tl-title">Welcome and introductions</p>
+            <p class="mag-tl-sub">Overview of AI red teaming and a hands-on red teaming exercise with insight from red-teamer Bolor-Erdene Jagdagdorj</p>
+          </div>
+          <div class="mag-tl-item">
+            <div class="mag-tl-dot"></div>
+            <p class="mag-tl-time">2:45 CET</p>
+            <p class="mag-tl-title">Session 1 — Envisioning at scale</p>
+            <p class="mag-tl-sub">Breakout groups on automation, coverage, and expert oversight</p>
+          </div>
+          <div class="mag-tl-item">
+            <div class="mag-tl-dot mag-tl-dot-break"></div>
+            <p class="mag-tl-time">3:45 CET</p>
+            <p class="mag-tl-title">Break and networking</p>
+          </div>
+          <div class="mag-tl-item">
+            <div class="mag-tl-dot"></div>
+            <p class="mag-tl-time">4:15 CET</p>
+            <p class="mag-tl-title">Keynote + Q&A</p>
+            <p class="mag-tl-sub">Alex Taylor and Ding Wang on AI as an ecosystem</p>
+          </div>
+          <div class="mag-tl-item">
+            <div class="mag-tl-dot"></div>
+            <p class="mag-tl-time">4:45 CET</p>
+            <p class="mag-tl-title">Session 2 — Zoomed-out discussion</p>
+            <p class="mag-tl-sub">Broader conversation on the future of human-centered AI evaluation</p>
+          </div>
+          <div class="mag-tl-item">
+            <div class="mag-tl-dot mag-tl-dot-break"></div>
+            <p class="mag-tl-time">5:45 CET</p>
+            <p class="mag-tl-title">Closing reflection</p>
+            <p class="mag-tl-sub">Takeaways, next steps, setting up networks</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mag-rule"></div>
+
+      <div class="mag-col" style="padding-left: 4px;">
+        <span class="mag-section-eyebrow">Three themes</span>
+        <div style="margin-bottom: 20px;">
+          <div class="mag-theme">
+            <p class="mag-theme-title">Automation levels</p>
+            <p class="mag-theme-desc">When agents help and when humans must lead the evaluation</p>
+          </div>
+          <div class="mag-theme">
+            <p class="mag-theme-title">Evaluator well-being</p>
+            <p class="mag-theme-desc">Preventing harms from repeated exposure to harmful content</p>
+          </div>
+          <div class="mag-theme">
+            <p class="mag-theme-title">Tooling gaps</p>
+            <p class="mag-theme-desc">Scenario libraries, annotation tools, and triage pipelines</p>
+          </div>
+        </div>
+
+        <span class="mag-section-eyebrow">What you get</span>
+        <div>
+          <div class="mag-theme">
+            <p class="mag-theme-desc">A shared output on key challenges and guiding principles for scaling AI red teaming</p>
+          </div>
+          <div class="mag-theme">
+            <p class="mag-theme-desc">Connections with practitioners across academia, industry, and nonprofits</p>
+          </div>
+          <div class="mag-theme">
+            <p class="mag-theme-desc">Pathways toward future publications, white papers, and grant proposals</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mag-band">
+      <div>
+        <p class="mag-band-label">Organised by</p>
+        <p class="mag-band-val">CMU · U. of Edinburgh · Google · Microsoft · Humane Intelligence</p>
+      </div>
+      <div>
+        <p class="mag-band-label">Participants</p>
+        <p class="mag-band-big">40–60</p>
+        <p class="mag-band-val" style="font-size:11px;">academics, red teamers, policymakers</p>
+      </div>
+      <div>
+        <p class="mag-band-label">Sectors</p>
+        <p class="mag-band-big">3</p>
+        <p class="mag-band-val" style="font-size:11px;">academia · industry · nonprofits</p>
+      </div>
+      <div>
+        <p class="mag-band-label">Supported by</p>
+        <p class="mag-band-val">NSF GRFP (DGE2140739) and NIST (60NANB24D231)</p>
+      </div>
+    </div>
+
+    <div class="mag-footer">
+      <span class="mag-footer-left">CHI EA '26 · Barcelona, Spain · April 13–17, 2026</span>
+      <span class="mag-footer-right">hearts-workshop.github.io</span>
+    </div>
+  </div>
+
+</div>
