@@ -4,7 +4,7 @@ papers:
     pdf: /pdfs/submissions/judith.pdf
   - title: "Scaling Human-Centered AI Red Teaming"
     authors: "<strong>Zifei (FeiFei) Han</strong> (National University of Singapore), Jane L. E (National University of Singamore)"
-    pdf: /pdfs/submissions/zifei
+    pdf: /pdfs/submissions/zifei.pdf
 
 concurrent:
   - title: "Red Teaming LLMs as Socio-Technical Practice: From Exploration and Data Creation to Evaluation"
@@ -13,7 +13,7 @@ concurrent:
   - title: "Dark and Bright Side of Participatory Red-Teaming with Targets of Stereotyping for Eliciting Harmful Behaviors from Large Language Models"
     authors: "<strong>Sieun Kim</strong> (KAIST), Yeeun Jo (Keimyung University), SUnmin Na (KAIST), Hyunseung Lim (KAIST), Eunchae Lee (KAIST), Yu Min Choi (KAIST), Soohyun Cho (Keimyung University), Hwajung Hong (KAIST)"
     pdf: /pdfs/concurrent/sieun.pdf
-  - title: "Investigating the Impact of AI-Assisted Tools on Soware Practitioner Well-Being"
+  - title: "Investigating the Impact of AI-Assisted Tools on Soware Practitioner Well-Being"
     authors: "<strong>Fairuz Nawer Meem</strong>(George Mason University)"
     pdf: /pdfs/concurrent/fairuz.pdf
 
