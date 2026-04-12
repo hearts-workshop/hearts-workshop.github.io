@@ -1,21 +1,37 @@
 papers:
   - title: "Bringing Cybersecurity Governance Insights to AI Red Teaming"
-    authors: "Judith Kankam-Boateng (University of Southern Denmark)"
+    authors: "<strong>Judith Kankam-Boateng</strong> (University of Southern Denmark)"
     pdf: /pdfs/submissions/judith.pdf
   - title: "Scaling Human-Centered AI Red Teaming"
     authors: "<strong>Zifei (FeiFei) Han</strong> (National University of Singapore), Jane L. E (National University of Singamore)"
-    pdf: /pdfs/submissions/zifei
+    pdf: /pdfs/submissions/zifei.pdf
+  - title: "Who Gets to Evaluate? Distributed Accountability in Red Teaming"
+    authors: "<strong>David Hartmann</strong> (Weizenbaum Institute for the Networked Society)"
+    pdf: /pdfs/submissions/david.pdf
+  - title: "Statement of Interest for HEARTS Workshop"
+    authors: "<strong>Anirban Mukhopadhya</strong>(Virginia Tech)"
+    pdf: /pdfs/submissions/anirban.pdf
+  - title: "Trust in Practice: Participatory Red Teaming for Safer and Inclusive Generative AI"
+    authors: "<strong>Lovely-Frances Domingo</strong>(University of Maryland), <strong>Maria Isabel (Marisa)	Magaña</strong> (University of Maryland), Sander Schulhoff (HackAPrompt and Learn Prompting), Daniel Greene (University of Maryland)"
+    pdf: /pdfs/submissions/marisa.pdf
 
 concurrent:
   - title: "Red Teaming LLMs as Socio-Technical Practice: From Exploration and Data Creation to Evaluation"
-    authors: "Adriana Alvarado Garcia (IBM Research), <strong>Ryuan Wan</strong> (Penn State University), Ozioma C. Oguine (University of Notre Dame), Karla Badillo-Urquiola (University of Notre Dame)"
+    authors: "<strong>Adriana Alvarado Garcia</strong> (IBM Research), <strong>Ryuan Wan</strong> (Penn State University), Ozioma C. Oguine (University of Notre Dame), Karla Badillo-Urquiola (University of Notre Dame)"
     pdf: /pdfs/concurrent/ruyuan.pdf
   - title: "Dark and Bright Side of Participatory Red-Teaming with Targets of Stereotyping for Eliciting Harmful Behaviors from Large Language Models"
-    authors: "<strong>Sieun Kim</strong> (KAIST), Yeeun Jo (Keimyung University), SUnmin Na (KAIST), Hyunseung Lim (KAIST), Eunchae Lee (KAIST), Yu Min Choi (KAIST), Soohyun Cho (Keimyung University), Hwajung Hong (KAIST)"
+    authors: "<strong>Sieun Kim</strong> (KAIST), Yeeun Jo (Keimyung University), Sunmin Na (KAIST), Hyunseung Lim (KAIST), Eunchae Lee (KAIST), Yu Min Choi (KAIST), Soohyun Cho (Keimyung University), Hwajung Hong (KAIST)"
     pdf: /pdfs/concurrent/sieun.pdf
   - title: "Investigating the Impact of AI-Assisted Tools on Soware Practitioner Well-Being"
-    authors: "<strong>Fairuz Nawer Meem</strong>(George Mason University)"
+    authors: "<strong>Fairuz Nawer Meem</strong> (George Mason University)"
     pdf: /pdfs/concurrent/fairuz.pdf
+  - title: "What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks"
+    authors: "<strong>Sijia Xiao</strong> (Carnegie Mellon University), Haodi Zou (University of California, San Diego), Alice Qian Zhang (Carnegie Mellon Unversity), Deepak Kumar (University of California, San Diego), Hong Shen (Carnegie Mellon University), Jason Hong (Carnegie Mellon University), Motahhare Eslami (Carnegie Mellon University)"
+    pdf: /pdfs/concurrent/sijia.pdf
 
 individuals:
   - name: "Oluchi Audu (Yux Design)"
+  - name: "Jen Weedon (Columbia University)"
+  - name: "Ranjan Prakash Mishra"
+  - name: "Jacy Anthis"
+  - name: "Gabriela Barrera"
