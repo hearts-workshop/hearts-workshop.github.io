@@ -1,12 +1,17 @@
 papers:
-  - title: "Example Concurrent Paper Title"
-    authors: "Author One, Author Two"
-    pdf: ""
+  - title: "Bringing Cybersecurity Governance Insights to AI Red Teaming"
+    authors: "Kankam-Boateng"
+    pdf: /pdfs/submissions/judith.pdf
 
 concurrent:
   - title: "Red Teaming LLMs as Socio-Technical Practice: From Exploration and Data Creation to Evaluation"
-    authors: "Ryuan Wan"
+    authors: "Adriana Alvarado Garcia (IBM Research), <strong>Ryuan Wan</strong> (Penn State University), Ozioma C. Oguine (University of Notre Dame), Karla Badillo-Urquiola (University of Notre Dame)"
     pdf: /pdfs/concurrent/ruyuan.pdf
+  - title: "Dark and Bright Side of Participatory Red-Teaming with Targets of Stereotyping for Eliciting Harmful Behaviors from Large Language Models"
+    authors: "<strong>Sieun Kim</strong> (KAIST), Yeeun Jo (Keimyung University), SUnmin Na (KAIST), Hyunseung Lim (KAIST), Eunchae Lee (KAIST), Yu Min Choi (KAIST), Soohyun Cho (Keimyung University), Hwajung Hong (KAIST)"
+    pdf: /pdfs/concurrent/sieun.pdf
+  - title: "Investigating the Impact of AI-Assisted Tools on Soware Practitioner Well-Being"
+    authors: "<strong>Fairuz Nawer Meem</strong>(George Mason University)""
 
 
 individuals:
