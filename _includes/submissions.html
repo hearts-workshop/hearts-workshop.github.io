@@ -102,7 +102,7 @@
 }
 
 .submissions-tabs {
-    border-bottom: 2px solid #a53860;
+    border-bottom: none;
     margin-bottom: 0;
 }
 
@@ -123,6 +123,12 @@
     border-color: #e8c4cf #e8c4cf transparent;
 }
 
+.submissions-tabs > li.active {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1px;
+}
+
 .submissions-tabs > li.active > a,
 .submissions-tabs > li.active > a:focus,
 .submissions-tabs > li.active > a:hover {
@@ -134,7 +140,6 @@
 
 .submissions-tab-content {
     border: 1px solid #a53860;
-    border-top: none;
     padding: 24px 28px;
     border-radius: 0 0 4px 4px;
 }
