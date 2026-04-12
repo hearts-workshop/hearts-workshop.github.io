@@ -1,12 +1,13 @@
 papers:
-  - title: "Red Teaming LLMs as Socio-Technical Practice: From Exploration and Data Creation to Evaluation"
-    authors: "Ryuan Wan"
-    pdf: /pdfs/concurrent/ruyuan
-
-concurrent:
   - title: "Example Concurrent Paper Title"
     authors: "Author One, Author Two"
     pdf: ""
+
+concurrent:
+  - title: "Red Teaming LLMs as Socio-Technical Practice: From Exploration and Data Creation to Evaluation"
+    authors: "Ryuan Wan"
+    pdf: /pdfs/concurrent/ruyuan.pdf
+
 
 individuals:
   - name: "Individual Name"
