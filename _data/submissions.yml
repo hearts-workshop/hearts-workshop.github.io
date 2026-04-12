@@ -1,7 +1,10 @@
 papers:
   - title: "Bringing Cybersecurity Governance Insights to AI Red Teaming"
-    authors: "Kankam-Boateng"
+    authors: "Judith Kankam-Boateng (University of Southern Denmark)"
     pdf: /pdfs/submissions/judith.pdf
+  - title: "Scaling Human-Centered AI Red Teaming"
+    authors: "<strong>Zifei (FeiFei) Han</strong> (National University of Singapore), Jane L. E (National University of Singamore)"
+    pdf: /pdfs/submissions/zifei
 
 concurrent:
   - title: "Red Teaming LLMs as Socio-Technical Practice: From Exploration and Data Creation to Evaluation"
@@ -12,7 +15,8 @@ concurrent:
     pdf: /pdfs/concurrent/sieun.pdf
   - title: "Investigating the Impact of AI-Assisted Tools on Soware Practitioner Well-Being"
     authors: "<strong>Fairuz Nawer Meem</strong>(George Mason University)""
-
+    pdf: /pdfs/concurrent/fairuz.pdf
 
 individuals:
-  - name: "Individual Name"
+  - name: "Oluchi Audu (Yux Design)"
+  - name: ""
