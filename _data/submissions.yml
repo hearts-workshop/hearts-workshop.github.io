@@ -14,9 +14,8 @@ concurrent:
     authors: "<strong>Sieun Kim</strong> (KAIST), Yeeun Jo (Keimyung University), SUnmin Na (KAIST), Hyunseung Lim (KAIST), Eunchae Lee (KAIST), Yu Min Choi (KAIST), Soohyun Cho (Keimyung University), Hwajung Hong (KAIST)"
     pdf: /pdfs/concurrent/sieun.pdf
   - title: "Investigating the Impact of AI-Assisted Tools on Soware Practitioner Well-Being"
-    authors: "<strong>Fairuz Nawer Meem</strong>(George Mason University)""
+    authors: "<strong>Fairuz Nawer Meem</strong>(George Mason University)"
     pdf: /pdfs/concurrent/fairuz.pdf
 
 individuals:
   - name: "Oluchi Audu (Yux Design)"
-  - name: ""
